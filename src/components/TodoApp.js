@@ -14,7 +14,7 @@ export default function TodoApp() {
 
 	return (
 		<ErrorBoundary>
-			<Container className='layout' style={{ 'padding-top': '30px' }}>
+			<Container className='main-layout' style={{ 'padding-top': '30px' }}>
 				<Card fluid>
 					<Card.Header
 						as='h1'

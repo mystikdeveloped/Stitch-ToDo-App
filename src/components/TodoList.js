@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
 import ErrorBoundary from 'react-error-boundary';
 import TodoItem from './TodoItem';
 import { Container, List } from 'semantic-ui-react';
@@ -28,13 +27,6 @@ export default function TodoList(props) {
 	);
 }
 const NoTodoItems = (props) => {
-	const Layout = styled.div`
-		text-align: center;
-		font-size: 2em;
-		padding-top: 60px;
-		padding-bottom: 60px;
-	`;
-
 	return (
 		<Container textAlign='center' fluid className='todo-container'>
 			{props.hasHadTodos ? (

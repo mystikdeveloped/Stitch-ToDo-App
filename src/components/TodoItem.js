@@ -16,7 +16,7 @@ export default function TodoItem(props) {
 		<Card fluid className='todo-layout' onClick={toggleStatus}>
 			<Card.Content className='todo-data'>
 				<Checkbox />
-				<Header as='h2'>{item.task}</Header>
+				<p className='todo-text'>{item.task}</p>
 			</Card.Content>
 		</Card>
 	);
