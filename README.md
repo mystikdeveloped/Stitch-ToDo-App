@@ -1,6 +1,6 @@
 # NodeJS ToDo App
 
-> A simple To-Do App built on a React frontend with MongoDB Atlas on the backend connected by Mongo Stitch functionality. Styled using Semantic UI React. It was built following the Stitch [todo app](https://docs.mongodb.com/stitch/tutorials/todo-overview/) tutorial with modifications for Semantic. 
+> A simple To-Do App built on a React frontend with MongoDB Atlas on the backend connected by Mongo Stitch functionality. Styled using Semantic UI React. 
 
 ---
 ## Requirements
