@@ -1,7 +1,7 @@
 {
 	"name": "mystikdeveloped-todo-app",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A MongodDB Stitch To-Do App",
 	"keywords": [],
 	"main": "src/index.js",
 	"dependencies": {
@@ -38,6 +38,6 @@
 		"not ie <= 11",
 		"not op_mini all"
 	],
-	"author": "",
+	"author": "Mystik Developed",
 	"license": "ISC"
 }
