@@ -17,7 +17,7 @@ To get started, first clone this repository
 ```git clone https://github.com/mystikdeveloped/NodeJS-ToDo-App.git```  
 Once cloned you will need to install the dependencies
 ```npm install```  
-Once installed, go to ```src/stitch/app.js``` and add your Stitch App ID to the project to connect to your MongoDB cluster
+Once installed, go to ```src/stitch/app.js``` and add your Stitch App ID to the project to connect to your MongoDB cluster  
 Then simply start the server  ```npm start```
 
 
