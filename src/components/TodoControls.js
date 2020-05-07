@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-import { CheckedIcon, UncheckedIcon } from './Icon';
-import { Button } from 'reactstrap';
 import TodoInput from './TodoInput';
+import { Container, Button } from 'semantic-ui-react';
 
 TodoControls.propTypes = {
 	items: PropTypes.array,
@@ -26,64 +24,37 @@ export default function TodoControls(props) {
 		}
 	};
 	const allTodosAreCompleted = items.every((item) => item.checked === true);
-	const someTodosAreCompleted = items.every((item) => item.checked === true);
+
 	return (
-		<Layout>
+		<Container fluid className='controls'>
 			<TodoInput
 				value={inputText}
 				addTodo={handleAddTodo}
 				onChange={handleInput}
 				onKeyDown={handleKeyPress}
 			/>
-			<ControlBar>
+			<Container fluid>
 				{items.length > 0 && !allTodosAreCompleted && (
-					<SelectAllButton
-						selected={someTodosAreCompleted}
-						onClick={actions.completeAllTodos}
-					/>
+					<Button
+						className='selectbtn'
+						floated='left'
+						onClick={actions.completeAllTodos}>
+						{props.selected ? (
+							<span>All Completed</span>
+						) : (
+							<span>Complete All</span>
+						)}
+					</Button>
 				)}
 				{hasCheckedItems && (
-					<CleanupButton onClick={actions.clearCompletedTodos}>
+					<Button
+						className='clearbtn'
+						floated='right'
+						onClick={actions.clearCompletedTodos}>
 						Clear Completed
-					</CleanupButton>
+					</Button>
 				)}
-			</ControlBar>
-		</Layout>
+			</Container>
+		</Container>
 	);
 }
-const Layout = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: 450px;
-`;
-const ControlBar = styled.div`
-	width: 100%;
-	margin-top: 10px;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-`;
-const CleanupButton = styled(Button)`
-	background-color: #f83d0e !important;
-`;
-const SelectAllButton = (props) => {
-	const Selector = styled(Button)`
-		color: black;
-		border: 0.5px solid rgba(0, 0, 0, 0.6) !important;
-		margin-right: 8px;
-	`;
-	return (
-		<Selector color='inverted' onClick={props.onClick}>
-			{props.selected ? (
-				<span>
-					<CheckedIcon />
-				</span>
-			) : (
-				<span>
-					<UncheckedIcon /> Complete All
-				</span>
-			)}
-		</Selector>
-	);
-};

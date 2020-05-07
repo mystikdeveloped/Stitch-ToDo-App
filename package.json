@@ -22,7 +22,8 @@
 		"react-error-boundary": "1.2.3",
 		"react-leaflet": "2.2.1",
 		"react-scripts": "^3.4.1",
-		"reactstrap": "7.1.0"
+		"reactstrap": "7.1.0",
+		"semantic-ui-react": "^0.88.2"
 	},
 	"devDependencies": {
 		"typescript": "3.3.3"

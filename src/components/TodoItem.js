@@ -1,41 +1,23 @@
-import React from "react";
-import PropTypes from "prop-types";
-import styled from "@emotion/styled";
-import { CheckedIcon, UncheckedIcon } from "./Icon";
-import { Card, CardBody } from "reactstrap";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { CheckedIcon, UncheckedIcon } from './Icon';
+import { Card, Header } from 'semantic-ui-react';
 
 TodoItem.propTypes = {
-  item: PropTypes.object,
-  remove: PropTypes.func,
-  setStatus: PropTypes.func,
-  toggleStatus: PropTypes.func,
+	item: PropTypes.object,
+	remove: PropTypes.func,
+	setStatus: PropTypes.func,
+	toggleStatus: PropTypes.func,
 };
 export default function TodoItem(props) {
-  const { item, toggleStatus } = props;
-  const Checkbox = item.checked ? CheckedIcon : UncheckedIcon;
-  return (
-    <Todo onClick={toggleStatus}>
-      <Layout>
-        <Checkbox />
-        <Text>{item.task}</Text>
-      </Layout>
-    </Todo>
-  );
+	const { item, toggleStatus } = props;
+	const Checkbox = item.checked ? CheckedIcon : UncheckedIcon;
+	return (
+		<Card fluid className='todo-layout' onClick={toggleStatus}>
+			<Card.Content className='todo-data'>
+				<Checkbox />
+				<Header as='h2'>{item.task}</Header>
+			</Card.Content>
+		</Card>
+	);
 }
-const Todo = styled(Card)`
-  margin: 4px auto;
-  :first-of-type {
-    margin-top: 0px;
-  }
-`;
-const Layout = styled(CardBody)`
-  display: flex;
-  align-items: top;
-  padding: 10px !important;
-`;
-const Text = styled.span`
-  font-size: 18px;
-  line-height: 24px;
-  margin-left: 10px;
-  max-width: calc(100% - 24px - 10px);
-`;
