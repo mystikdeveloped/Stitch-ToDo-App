@@ -11,7 +11,7 @@
 		"@reach/router": "1.2.1",
 		"@rooks/use-timeout": "1.2.0",
 		"dotenv": "7.0.0",
-		"leaflet": "1.4.0",
+		"leaflet": "1.6.0",
 		"leaflet.awesome-markers": "2.0.5",
 		"mongodb-stitch-browser-sdk": "~4.8.0",
 		"react": "16.8.3",
