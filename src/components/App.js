@@ -24,13 +24,13 @@ function AppUI() {
 		<div className='layout'>
 			<div className='navbar'>
 				<Header as='h1' className='title'>
-					Mystik Developed Node To-Do App
+					Node To-Do
+					{isLoggedIn && (
+						<Button floated='right' inverted onClick={handleLogout}>
+							Logout
+						</Button>
+					)}
 				</Header>
-				{isLoggedIn && (
-					<Button inverted onClick={handleLogout}>
-						Logout
-					</Button>
-				)}
 			</div>
 			{isLoggedIn ? <TodoApp /> : <Login />}
 		</div>

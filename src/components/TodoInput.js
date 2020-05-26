@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+
 import { Input, Container, Button } from 'semantic-ui-react';
 
 TodoInput.propTypes = {
@@ -11,7 +11,7 @@ export default function TodoInput(props) {
 	return (
 		<Container>
 			<Input
-				style={{ width: '75%', 'margin-bottom': '20px' }}
+				style={{ 'margin-left': '5%', width: '75%' }}
 				{...inputProps}
 				type='text'
 				placeholder='What Do You Need To Do?'
@@ -22,17 +22,13 @@ export default function TodoInput(props) {
 }
 
 const ActionButton = (props) => {
-	const Text = styled.div`
-		margin-right: 8px;
-		margin-left: 8px;
-	`;
 	return (
 		<Button
 			className='mainbtns'
 			color='info'
 			onClick={props.action}
 			disabled={props.disabled}>
-			<Text>{props.children}</Text>
+			{props.children}
 		</Button>
 	);
 };

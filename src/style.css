@@ -5,24 +5,25 @@
 }
 
 .mainbtns {
-	margin-left: 20px !important;
+	margin: 20px !important;
 	color: white !important;
 	background-color: #2d545e !important;
 }
 
 .clearbtn {
-	margin-right: 40px !important;
+	margin: 20px !important;
 	color: white !important;
 	background-color: #ff1515 !important;
 }
 
 .selectbtn {
-	margin-left: 40px !important;
+	margin: 20px !important;
 	color: white !important;
 	background-color: #2d545e !important;
 }
 
 .title {
+	margin: 5px !important;
 	padding-top: 10px !important;
 	color: white !important;
 }
